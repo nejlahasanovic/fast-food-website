@@ -1,0 +1,12 @@
+Tasks se nalaze na ovim stranicama:
+1. galerija.html
+2. onama.html
+3. meni.html
+4. onama.html
+5. karijera.html
+6. onama.html
+7. karijera.html
+8. karijera.html
+9. index.html
+10. menu.html
+11. onama.html

@@ -29,6 +29,94 @@ a {
   background-color: white;
 }
 
+.toggle-text {
+  display: none;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f39c12;
+  transition: transform 0.3s;
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+.open .toggle-text {
+  display: block;
+  max-height: 1000px; 
+}
+
+.open .toggle-btn {
+  transform: rotate(180deg); 
+}
+
+@media (max-width: 768px) {
+  .toggle-text {
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+.faq-section {
+  background-color: #000; 
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+.faq-section .container {
+  max-width: 600px; 
+  margin: 0 auto;
+}
+
+.faq-section .card {
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; 
+}
+
+.faq-section .card-header {
+  background-color: #fff;
+  color: #000; 
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  border-radius: 10px 10px 0 0;
+}
+
+.faq-section .card-body {
+  padding: 15px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.faq-section .btn-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.faq-section .btn-link:hover {
+  text-decoration: underline;
+}
+
+.faq-section .card-body p {
+  margin: 0;
+}
+
+
 .carousel-inner {
   position: relative;
   width: 100%;
@@ -155,4 +243,4 @@ a {
   .tekst_slike2 .container .text {
     margin: 20px 20px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

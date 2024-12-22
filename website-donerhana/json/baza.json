@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Elvis Alihodzic",
+        "role": "Doner majstor",
+        "description": "Osigurava da doner bude njam",
+        "image": "img/ciko.png"
+    },
+    {
+        "name": "Amina Halilović",
+        "role": "Pomoćni kuhar",
+        "description": "Pomaže u svakodnevnoj pripremi donera",
+        "image": "img/tetadoner.png"
+    }
+]
