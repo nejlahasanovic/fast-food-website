@@ -9,6 +9,8 @@ body {
     background-color: black;
 }
 
+
+
 :root {
     --el-color: white;
 }
@@ -176,7 +178,6 @@ nav ul li a:hover {
     color: orange;
 }
 
-   
 .showcase {
     height: calc(100vh - 100px);
     background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("../img/index.jpg");
@@ -185,12 +186,9 @@ nav ul li a:hover {
 }
 
 .showcase-content h1 {
-
     color: white;
     letter-spacing: 2px;
     font-family: cursive;
-    
-
 }
 
 .showcase-content p {
@@ -221,7 +219,6 @@ nav ul li a:hover {
 }
 
 .o_nama{
-
     margin-top: 5%;
 }
 
@@ -243,14 +240,13 @@ nav ul li a:hover {
 }
 
 .o_nama h2 {
-
     font-family: cursive;
     font-style: italic;
     font-size: x-large;
     text-align: center;
 }
-.o_nama h3 {
 
+.o_nama h3 {
     font-size: x-large;
     text-align: center;
     color: orange;
@@ -275,7 +271,6 @@ nav ul li a:hover {
 
 .meni {
     padding-top: 400px; 
-   
 }
 
 .menu-items {
@@ -284,7 +279,6 @@ nav ul li a:hover {
     gap: 20px;
     flex-wrap: wrap; 
 }
-
 
 .menu-item {
     background-color: #333;
@@ -306,6 +300,7 @@ nav ul li a:hover {
     font-size: 2.5rem;
     font-family: cursive;
 }
+
 .menu-item img {
     width: 100%; 
     height: 200px;  
@@ -337,7 +332,6 @@ nav ul li a:hover {
 }
 
 .menu-container {
- 
     background-color: rgba(231, 214, 200, 0.805);
     padding: 30px;
     margin: 5% auto;
@@ -346,14 +340,17 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .menu-container .separator{
     padding-top: 25px;
 }
+
 .menu-container h1{
     text-align: center;
     font-size: x-large;
     font-family: cursive;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -375,7 +372,6 @@ td.separator {
     color: #888;
 }
 
-
 td:last-child {
     text-align: right;
     font-weight: bold;
@@ -396,7 +392,6 @@ td:last-child {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 15px;
-    
 }
 
 .dostava-btn {
@@ -458,30 +453,30 @@ footer {
     text-decoration: underline;
 }
 
-
 @media screen and (max-width: 768px) {
     .menu-item {
         width: 100%; 
     }
+
     .showcase-content {
         width: 80%;
         margin: auto;
         text-align: center;
         transform: translateY(30vh);
     }
-    
+
     .o_nama .o_nama-image,
     .o_nama .o_nama-content {
         width: 100%;
         float: none;
         text-align: center;
     }
-    
+
     .o_nama h2,
     .o_nama h3 {
         font-size: 1.5rem; 
     }
-    
+
     .o_nama ul {
         margin-top: 20px;
         list-style: none;
@@ -505,20 +500,16 @@ footer {
     .menu-container h1 {
         font-size: 1.5rem; 
     }
-    
+
     footer {
         padding: 15px 0;
     }
-    
+
     .footer-container {
         padding: 0 20px;
     }
-    
+
     .footer-content {
         display: block;
     }
-
 }
-
-
-

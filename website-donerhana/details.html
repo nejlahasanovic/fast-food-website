@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji proizvoda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="left-links">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="meni.html">Meni</a></li>
+                </ul>
+                <a href="#" class="logo">
+                    <img src="./img/logodva.png" alt="">
+                </a>
+                <ul class="right-links">
+                    <li><a href="galerija.html">Galerija</a></li>
+                    <li><a href="karijera.html">Karijera</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="product-details" class="product-details">
+        <div class="container">
+            <h2>Detalji proizvoda</h2>
+
+         
+            <div id="product-info">
+               
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/Donerhana/?locale=en" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/donerhana/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <div class="footer-info">
+                    <p>&copy; Foundations of Web Development</p>
+                    <p>Nejla Hasanović</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        
+        const products = {
+            1: {
+                name: "Durum",
+                description: "Meso, sos, sezonska salata, tortilja.",
+                price: "6.00 KM",
+                image: "./img/prva.jpg"
+            },
+            2: {
+                name: "Doner",
+                description: "Meso, sos, sezonska salata, lepina.",
+                price: "6.00 KM",
+                image: "./img/devetneasta.jpg"
+            },
+            3: {
+                name: "Doner box",
+                description: "Meso, sos, sezonska salata, pomfrit.",
+                price: "6.00 KM",
+                image: "./img/sesta.jpg"
+            }
+        };
+
+        
+        if (productId && products[productId]) {
+            const product = products[productId];
+            const productInfoDiv = document.getElementById('product-info');
+            productInfoDiv.innerHTML = `
+                <div class="product-detail">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <span>${product.price}</span>
+                </div>
+            `;
+        } else {
+            document.getElementById('product-info').innerHTML = `<p>Proizvod nije pronađen.</p>`;
+        }
+    </script>
+
+</body>
+</html>

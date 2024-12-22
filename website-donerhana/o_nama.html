@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donerhana\O nama</title>
+    <title>O nama</title>
     <link rel="icon" href="img/logo.ico">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,6 +32,8 @@
                 </ul>
             </div>
         </div>
+
+        
     </nav>
 
     
@@ -110,7 +110,8 @@
         <div class="container d-flex align-items-center">
             <div class="text">
                 <h3>Donerhana – Mjesto gdje se ljubav prema hrani spaja sa prijateljstvom</h3>
-                <p>Naš tim je posvećen pružanju vrhunskog iskustva u svakom zalogaju. Ponosni smo na našu ponudu, jer svaki doner koji serviramo pripremamo s pažnjom i ljubavlju. Osim toga, nastojimo stvoriti prijatnu atmosferu u kojoj ćete se osjećati kao kod kuće. Želimo da vas dočekamo kao prijatelje, jer za nas je svaki kupac dio naše porodice, a vaš osmijeh na kraju obroka je najvažnija nagrada za naš trud i rad. Ovdje ne samo da uživate u donerima, već i u iskustvu koje pružamo s pažnjom i posvećenošću. Hvala što ste dio naše zajednice jer bez vas ne bi bilo ni nas.</p>
+                <p class="toggle-text">Naš tim je posvećen pružanju vrhunskog iskustva u svakom zalogaju. Ponosni smo na našu ponudu, jer svaki doner koji serviramo pripremamo s pažnjom i ljubavlju. Osim toga, nastojimo stvoriti prijatnu atmosferu u kojoj ćete se osjećati kao kod kuće. Želimo da vas dočekamo kao prijatelje, jer za nas je svaki kupac dio naše porodice, a vaš osmijeh na kraju obroka je najvažnija nagrada za naš trud i rad. Ovdje ne samo da uživate u donerima, već i u iskustvu koje pružamo s pažnjom i posvećenošću. Hvala što ste dio naše zajednice jer bez vas ne bi bilo ni nas.</p>
+                <button class="toggle-btn">&#8595;</button> 
             </div>
             <img src="img/elvisikeno.jpg" alt="" class="image img-fluid">
         </div>
@@ -121,11 +122,56 @@
             <img src="img/novagodinaedition.jpg" alt="" class="image img-fluid">
             <div class="text">
                 <h3>Donerhana – Mjesto gdje se ljubav prema hrani spaja sa prijateljstvom</h3>
-                <p>Naš tim je posvećen pružanju vrhunskog iskustva u svakom zalogaju. Ponosni smo na našu ponudu, jer svaki doner koji serviramo pripremamo s pažnjom i ljubavlju. Osim toga, nastojimo stvoriti prijatnu atmosferu u kojoj ćete se osjećati kao kod kuće. Želimo da vas dočekamo kao prijatelje, jer za nas je svaki kupac dio naše porodice, a vaš osmijeh na kraju obroka je najvažnija nagrada za naš trud i rad. Ovdje ne samo da uživate u donerima, već i u iskustvu koje pružamo s pažnjom i posvećenošću. Hvala što ste dio naše zajednice jer bez vas ne bi bilo ni nas.</p>
+                <p class="toggle-text">Naš tim je posvećen pružanju vrhunskog iskustva u svakom zalogaju. Ponosni smo na našu ponudu, jer svaki doner koji serviramo pripremamo s pažnjom i ljubavlju. Osim toga, nastojimo stvoriti prijatnu atmosferu u kojoj ćete se osjećati kao kod kuće. Želimo da vas dočekamo kao prijatelje, jer za nas je svaki kupac dio naše porodice, a vaš osmijeh na kraju obroka je najvažnija nagrada za naš trud i rad. Ovdje ne samo da uživate u donerima, već i u iskustvu koje pružamo s pažnjom i posvećenošću. Hvala što ste dio naše zajednice jer bez vas ne bi bilo ni nas.</p>
+                <button class="toggle-btn">&#8595;</button> 
             </div>
-            
         </div>
     </section>
+
+
+        
+        <section id="faq" class="faq-section">
+            <div class="container my-5">
+                <div class="text-center mb-4">
+                    <h2 style="color: white;">FAQ - Često postavljana pitanja</h2>
+                    <p style="color: white;">Imate pitanje? Mi imamo odgovor!</p>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <button class="btn btn-link" id="faq-toggle" onclick="toggleFAQ()">Pitanje 1: Kako naručiti?</button>
+                    </div>
+                    <div class="card-body" id="faq-content" style="display: none;">
+                        <p>Za narudžbu, jednostavno posjetite korpa.ba stranicu ili glovo.ba, odaberite željeni proizvod i kliknite na opciju za narudžbu. Dostava je brza i pouzdana!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-link" id="faq-toggle2" onclick="toggleFAQ2()">Pitanje 2: Koje vrste hrane nudite?</button>
+                    </div>
+                    <div class="card-body" id="faq-content2" style="display: none;">
+                        <p>Nudimo raznovrsne donere, durume, donerboxove. Svaka opcija je pripremljena sa pažnjom i ljubavlju.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="teamSection" class="team-section">
+            <div class="container my-5">
+                <h2 class="text-center mb-4">Naš Prošireni Tim</h2>
+                <div id="teamContainer" class="row justify-content-center"></div>
+            </div>
+        </section>
+        
+
+        <section id="newsSection" class="news-section">
+            <div class="container my-5">
+                <h2 class="text-center mb-4">Najnovije vijesti</h2>
+                <div id="newsContainer" class="row justify-content-center"></div>
+            </div>
+        </section>
+        
+    
 
     
     <footer id="footerSection" class="footer">
@@ -135,6 +181,53 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="/js/toggle.js"></script>
+
+
+    <script>
+        const apiKey = 'd8360fe41a094a1386e7738c61b9a272'; 
+        const newsContainer = document.getElementById('newsContainer');
+    
+        async function fetchNews() {
+            try {
+                
+                const response = await fetch(`https://newsapi.org/v2/everything?q=fast+food&language=en&sortBy=publishedAt&apiKey=${apiKey}`);
+                const data = await response.json();
+                displayNews(data.articles);
+            } catch (error) {
+                console.error('Greška prilikom dohvaćanja vijesti:', error);
+                newsContainer.innerHTML = '<p class="text-center text-danger">Greška prilikom dohvaćanja vijesti. Pokušajte ponovo kasnije.</p>';
+            }
+        }
+    
+        function displayNews(articles) {
+            newsContainer.innerHTML = ''; 
+            if (articles.length === 0) {
+                newsContainer.innerHTML = '<p class="text-center">Nema dostupnih vijesti o fast foodu.</p>';
+                return;
+            }
+    
+            articles.forEach(article => {
+                const newsCard = document.createElement('div');
+                newsCard.className = 'col-md-4 mb-4 d-flex justify-content-center';
+                newsCard.innerHTML = `
+                    <div class="card" style="width: 18rem;">
+                        <img src="${article.urlToImage || 'img/default-news.jpg'}" class="card-img-top" alt="Slika vijesti">
+                        <div class="card-body">
+                            <h5 class="card-title">${article.title}</h5>
+                            <p class="card-text">${article.description || 'Detalji nisu dostupni.'}</p>
+                            <a href="${article.url}" class="btn btn-primary" target="_blank">Pročitaj više</a>
+                        </div>
+                    </div>
+                `;
+                newsContainer.appendChild(newsCard);
+            });
+        }
+    
+        document.addEventListener('DOMContentLoaded', fetchNews);
+    </script>
+    
+    
 
 </body>
 </html>
