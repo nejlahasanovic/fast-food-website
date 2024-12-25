@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donerhana\Meni</title>
+    <title>Donerhana - Meni</title>
     <link rel="icon" href="img/logo.ico">
     <link rel="stylesheet" href="/css/meni.css">
+    <link rel="stylesheet" href="/css/.css">
 </head>
 <body>
 
@@ -13,205 +14,45 @@
         <div class="container">
             <div class="header-content">
                 <img src="./img/logojedan.png" alt="Donerhana Logo" class="logo">
-                <h1>meni</h1>
+                <h1>Meni</h1>
+
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
             </div>
         </div>
     </header>
 
-    <div class="menu-container">
-        <h1>Meni Donerhana</h1>
 
-     
-        <div class="combo-section">
-            <h2>Combo Ponude</h2>
-            <div class="combo-cards">
-            
-                <div class="combo-card">
-                    <img src="./img/osma.jpg" alt="Doner Combo">
-                    <div class="combo-card-info">
-                        <h3>Doner Combo</h3>
-                        <p>Doner + pomfrit + piće</p>
-                        <div class="price">10.00 KM</div>
-                    </div>
-                </div>
-               
-                <div class="combo-card">
-                    <img src="./img/petnaesta.jpg" alt="Durum Combo">
-                    <div class="combo-card-info">
-                        <h3>Durum Combo</h3>
-                        <p>Durum + pomfrit + piće</p>
-                        <div class="price">10.00 KM</div>
-                    </div>
-                </div>
-                
-                <div class="combo-card">
-                    <img src="./img/donerbox.jpg" alt="Doner Box Combo">
-                    <div class="combo-card-info">
-                        <h3>Doner Box Combo</h3>
-                        <p>Doner box + pomfrit + piće</p>
-                        <div class="price">10.00 KM</div>
-                    </div>
-                </div>
-                
-                <div class="combo-card">
-                    <img src="./img/deveta.jpg" alt="Doner Salata Combo">
-                    <div class="combo-card-info">
-                        <h3>Doner Salata Combo</h3>
-                        <p>Doner salata + pomfrit + piće</p>
-                        <div class="price">10.00 KM</div>
-                    </div>
-                </div>
-            </div>
+        <div class="menu-container">
+            <h1>Meni Donerhana</h1>
+    
+            <div id="menu-sections"></div>
         </div>
 
+
+    <script>
+        const toggleSwitch = document.querySelector('.switch input');
+        const currentTheme = localStorage.getItem('theme') || 'light'; 
+        document.body.classList.add(currentTheme + '-mode');
         
-        <div class="main-dishes-section">
-            <h2>Glavna Jela</h2>
-            <div class="main-dishes-cards">
-                
-                <div class="main-dish-card">
-                    <img src="./img_menu/doner.jpg" alt="Doner">
-                    <div class="main-dish-card-info">
-                        <h3>Doner</h3>
-                        <p>Meso, sos, sezonska salata, lepina.</p>
-                        <div class="price">6.00 KM</div>
-                    </div>
-                </div>
-                
-                <div class="main-dish-card">
-                    <img src="./img_menu/durum.jpg" alt="Durum">
-                    <div class="main-dish-card-info">
-                        <h3>Durum</h3>
-                        <p>Meso, sos, sezonska salata, tortilja.</p>
-                        <div class="price">6.00 KM</div>
-                    </div>
-                </div>
-               
-                <div class="main-dish-card">
-                    <img src="./img_menu/donerbox_salata.jpg" alt="Doner Box">
-                    <div class="main-dish-card-info">
-                        <h3>Doner Box</h3>
-                        <p>Meso, sos, sezonska salata, pomfrit.</p>
-                        <div class="price">6.00 KM</div>
-                    </div>
-                </div>
-                
-                <div class="main-dish-card">
-                    <img src="./img_menu/donerbox_salata.jpg" alt="Doner Salata">
-                    <div class="main-dish-card-info">
-                        <h3>Doner Salata</h3>
-                        <p>Meso, sos, sezonska salata.</p>
-                        <div class="price">6.00 KM</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        function toggleTheme() {
+            if (document.body.classList.contains('light-mode')) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark'); 
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light'); 
+            }
+        }
 
-        
-        <div class="extras-section">
-            <h2>Dodaci</h2>
-            <div class="extras-cards">
-                
-                <div class="extra-card">
-                    <img src="./img_menu/pomfrit.jpg" alt="Pomfrit">
-                    <div class="extra-card-info">
-                        <h3>Pomfrit</h3>
-                        <p>Fry'n Dip</p>
-                        <div class="price">3.00 KM</div>
-                    </div>
-                </div>
-                
-                <div class="extra-card">
-                    <img src="./img_menu/luk.jpg" alt="Onion Rings">
-                    <div class="extra-card-info">
-                        <h3>Onion Rings</h3>
-                        <p>Pohovani luk</p>
-                        <div class="price">4.00 KM</div>
-                    </div>
-                </div>
-                
-                <div class="extra-card">
-                    <img src="./img_menu/lepina.jpg" alt="Lepina">
-                    <div class="extra-card-info">
-                        <h3>Lepina</h3>
-                        <p>Svježe pečena lepina</p>
-                        <div class="price">1.00 KM</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        toggleSwitch.addEventListener('change', toggleTheme);
+    </script>
 
-        
-        <div class="drinks-section">
-            <h2>Pića</h2>
-            <div class="drinks-cards">
-                
-                <div class="drink-card">
-                    <img src="./img_menu/voda_jedan.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Voda</h3>
-                        <p>Olimpija mineralna</p>
-                        <div class="price">2.0 KM</div>
-                    </div>
-                </div>
+<script src="/js/meni.js"></script>
 
-                <div class="drink-card">
-                    <img src="./img_menu/voda_dva.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Voda</h3>
-                        <p>Olimpija prirodna</p>
-                        <div class="price">2.0 KM</div>
-                    </div>
-                </div>
-
-                <div class="drink-card">
-                    <img src="./img_menu/kola.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Coca-Cola</h3>
-                        <p>Coca-Cola regular 500ml</p>
-                        <div class="price">2.50 KM</div>
-                    </div>
-                </div>
-
-                <div class="drink-card">
-                    <img src="./img_menu/kola_zero.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Coca-Cola</h3>
-                        <p>Coca-Cola zero 500ml</p>
-                        <div class="price">2.50 KM</div>
-                    </div>
-                </div>
-
-                <div class="drink-card">
-                    <img src="./img_menu/fanta.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Fanta</h3>
-                        <p>Fanta Orange 500ml</p>
-                        <div class="price">2.50 KM</div>
-                    </div>
-                </div>
-
-                <div class="drink-card">
-                    <img src="./img_menu/sprite.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Sprite</h3>
-                        <p>Sprite 500ml</p>
-                        <div class="price">2.50 KM</div>
-                    </div>
-                </div>
-
-                <div class="drink-card">
-                    <img src="./img_menu/sveps.jpg" alt="Piće">
-                    <div class="drink-card-info">
-                        <h3>Schweppes</h3>
-                        <p>Schweppes Bitter Lemon 500ml</p>
-                        <div class="price">2.50 KM</div>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-    </div>
 </body>
 </html>
